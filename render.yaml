@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: razzbai-backend
+    env: docker
+    plan: free
+    autoDeploy: true
+    rootDir: razzbai-backend
+    dockerfilePath: Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
